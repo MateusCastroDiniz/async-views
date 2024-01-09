@@ -3,14 +3,6 @@ import asyncio
 from django.http import JsonResponse, HttpResponse
 import httpx
 
-def api(request):
-    time.sleep(1)
-    payload = {"message": "Hello World!"}
-
-    if "task_id" in request.GET:
-        payload["task_id"] = request.GET["task_id"]
-    return JsonResponse(payload)
-
 async def http_call_async():
     for num in range(1, 6):
         await asyncio.sleep(1)
